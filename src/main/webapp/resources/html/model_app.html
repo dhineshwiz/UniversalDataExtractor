@@ -1,0 +1,37 @@
+
+
+<div type="ng" class="modal-header">
+            <h3 class="modal-title">Add Application</h3>
+        </div>
+        <div class="modal-body">
+            	<form  class="form-horizontal" name="newapp" novalidate >
+				     <div class="form-group" ng-class="{ 'has-error': newapp.appnme.$touched && newapp.appnme.$invalid }">
+        <label class = "col-md-3 control-label" for="appnme">Application Name</label>
+        <div class="col-md-9">
+        <input type="text" name="query_selector" id="appnme" class="form-control" ng-model="Application.application_name"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newapp.appnme.$touched && newapp.appnme.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newapp.appnme.$touched && newapp.appnme.$valid">Success </span>
+        </div>
+
+
+      </div>
+	   <div class="form-group" ng-class="{ 'has-error': newapp.constring.$touched && newapp.constring.$invalid }">
+        <label class = "col-md-3 control-label" for="constring">Email Distribution List</label>
+        <div class="col-md-9">
+        <input type="text" name="constring" id="constring" class="form-control" ng-model="Application.email"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newapp.constring.$touched && newapp.constring.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newapp.constring.$touched && newapp.constring.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+
+
+	  </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-disabled="newapp.$invalid " ng-click="ok()" >OK</button>
+            <button class="btn btn-warning" type="button">Cancel</button>
+			<pre>{{CollapseDemoCtrl1.newapp || json}}</pre>
+        </div>
+

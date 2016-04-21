@@ -1,0 +1,34 @@
+<div class="modal-header">
+            <h3 class="modal-title">Add Category</h3>
+        </div>
+        <div class="modal-body">
+            	<form  class="form-horizontal" name="newcat" novalidate >
+				     <div class="form-group" ng-class="{ 'has-error': newcat.catnme.$touched && newcat.catnme.$invalid }">
+        <label class = "col-md-3 control-label" for="catnme">Category Name</label>
+        <div class="col-md-9">
+        <input type="text" name="query_selector" id="catnme" class="form-control" ng-model="Category.category_Name"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcat.catnme.$touched && newcat.catnme.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcat.catnme.$touched && newcat.catnme.$valid">Success </span>
+        </div>
+
+
+      </div>
+	   <div class="form-group" ng-class="{ 'has-error': newcat.catdesc.$touched && newcat.catdesc.$invalid }">
+        <label class = "col-md-3 control-label" for="catdesc">Category Description</label>
+        <div class="col-md-9">
+        <input type="text" name="catdesc" id="catdesc" class="form-control" ng-model="Category.category_Description"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcat.catdesc.$touched && newcat.catdesc.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcat.catdesc.$touched && newcat.catdesc.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+
+
+	  </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-disabled="newcat.$invalid " ng-click="ok()" >OK</button>
+            <button class="btn btn-warning" type="button" ng-click="newcat.$setUntouched()">Cancel</button>
+			<pre>{{Category || json}}</pre>
+        </div>

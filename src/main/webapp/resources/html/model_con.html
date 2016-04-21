@@ -1,0 +1,119 @@
+<div class="modal-header">
+            <h3 class="modal-title">Add Connection</h3>
+        </div>
+        <div class="modal-body">
+            	<form  class="form-horizontal" name="newcon" novalidate >
+				     <div class="form-group" ng-class="{ 'has-error': newcon.connme.$touched && newcon.connme.$invalid }">
+        <label class = "col-md-3 control-label" for="connme">Connection Name</label>
+        <div class="col-md-9">
+        <input type="text" name="query_selector" id="connme" class="form-control" ng-model="ConnectionDtls.connection_name"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.connme.$touched && newcon.connme.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.connme.$touched && newcon.connme.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+	  <div class="form-group" ng-class="{ 'has-error': newcon.Connection_type.$touched && newcon.Connection_type.$invalid }">
+        <label class = "col-md-3 control-label" for="Connection_type">Connection Type</label>
+        <div class="col-md-9">
+        <select class="form-control"id="Connection_type" class="form-control" ng-model="ConnectionDtls.connection_type" required>
+		<option>Sql Server</option>
+
+		<option>My Sql</option>
+		<option>Oracle</option>
+
+
+
+		</select>
+		<span style="color:red" class="has-error" ng-show="newcon.Connection_type.$touched && newcon.Connection_type.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.Connection_type.$touched && newcon.Connection_type.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+ <div class="form-group" ng-class="{ 'has-error': newcon.ipaddress.$touched && newcon.ipaddress.$invalid }">
+        <label class = "col-md-3 control-label" for="ipaddress">IP Address</label>
+        <div class="col-md-9">
+        <input type="text" name="ipaddress" id="ipaddress" class="form-control" ng-model="ConnectionDtls.server_ip"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.ipaddress.$touched && newcon.ipaddress.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.ipaddress.$touched && newcon.ipaddress.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+	  <div class="form-group" ng-class="{ 'has-error': newcon.Port_Number.$touched && newcon.Port_Number.$invalid }">
+        <label class = "col-md-3 control-label" for="Port_Number">Port Number</label>
+        <div class="col-md-9">
+        <input type="number" name="Port_Number" id="Port_Number" class="form-control" ng-model="ConnectionDtls.port_number"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.Port_Number.$touched && newcon.Port_Number.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.Port_Number.$touched && newcon.Port_Number.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+
+	  <div class="form-group" ng-class="{ 'has-error': newcon.DB_Name.$touched && newcon.DB_Name.$invalid }">
+        <label class = "col-md-3 control-label" for="DB_Name">DB Name</label>
+        <div class="col-md-9">
+        <input type="text" name="DB_Name" id="DB_Name" class="form-control" ng-model="ConnectionDtls.db_name"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.DB_Name.$touched && newcon.DB_Name.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.DB_Name.$touched && newcon.DB_Name.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+	   <div class="form-group" ng-class="{ 'has-error': newcon.Driver_name.$touched && newcon.Driver_name.$invalid }">
+        <label class = "col-md-3 control-label" for="Driver_name">Driver Name</label>
+        <div class="col-md-9">
+        <input type="text" name="Driver_name" id="Driver_name" class="form-control" ng-model="ConnectionDtls.driver_name"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.Driver_name.$touched && newcon.Driver_name.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.Driver_name.$touched && newcon.Driver_name.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+	  <div class="form-group" ng-class="{ 'has-error': newcon.User_Name.$touched && newcon.User_Name.$invalid }">
+        <label class = "col-md-3 control-label" for="User_Name">User Name</label>
+        <div class="col-md-9">
+        <input type="text" name="User_Name" id="User_Name" class="form-control" ng-model="ConnectionDtls.user_name"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.User_Name.$touched && newcon.User_Name.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.User_Name.$touched && newcon.User_Name.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+
+	  <div class="form-group" ng-class="{ 'has-error': newcon.Password.$touched && newcon.Password.$invalid }">
+        <label class = "col-md-3 control-label" for="Password">Password</label>
+        <div class="col-md-9">
+        <input type="password" name="Password" id="Password" class="form-control" ng-model="ConnectionDtls.password"  ng-minlength="1" required>
+		<span style="color:red" class="has-error" ng-show="newcon.Password.$touched && newcon.Password.$invalid">invalid input </span>
+									<span style="color:green" class="has-error" ng-show="newcon.Password.$touched && newcon.Password.$valid">Success </span>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+	  </form>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-disabled="newcon.$invalid " ng-click="ok()" >OK</button>
+            <button class="btn btn-warning" type="button" ng-click="newcon.$setUntouched()">Cancel</button>
+			<pre>{{ConnectionDtls || json}}</pre>
+        </div>
