@@ -5,6 +5,7 @@ info:
   description: Buy or rent spacecrafts
 
 paths:
+  dssc
   /spacecrafts/{spacecraftId}:
     parameters:
       - name: spacecraftId
