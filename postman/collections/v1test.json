@@ -1,15 +1,15 @@
 {
 	"info": {
-		"_postman_id": "8cd74518-6240-4665-9afa-ead43c5f7e8b",
-		"name": "v1",
+		"_postman_id": "4d34e501-cc48-4693-acb5-d5943b8ba170",
+		"name": "v1test",
 		"description": "Buy or rent spacecrafts",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "7321-8cd74518-6240-4665-9afa-ead43c5f7e8b"
+		"_uid": "7321-4d34e501-cc48-4693-acb5-d5943b8ba170"
 	},
 	"item": [
 		{
 			"name": "Read a spacecraft",
-			"id": "9d13999c-4a62-4126-aec0-f0a04853468f",
+			"id": "e54a2e69-b13a-49b7-ba32-80f55f430e62",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -32,6 +32,7 @@
 					],
 					"variable": [
 						{
+							"id": "a4495f99-f8f5-4bc7-a22d-38e1c3838e83",
 							"key": "spacecraftId",
 							"value": "non",
 							"description": "(Required) The unique identifier of the spacecraft"
@@ -41,15 +42,14 @@
 			},
 			"response": [
 				{
-					"id": "d9c5e42f-38bb-4b92-b29f-6209ee4a90d4",
+					"id": "a42cdc68-b7a5-4e40-8b8f-1f39ea35c476",
 					"name": "The spacecraft corresponding to the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -63,6 +63,7 @@
 							],
 							"variable": [
 								{
+									"id": "a4495f99-f8f5-4bc7-a22d-38e1c3838e83",
 									"key": "spacecraftId",
 									"value": "non",
 									"description": "(Required) The unique identifier of the spacecraft"
@@ -73,7 +74,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -81,19 +81,17 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"quis\",\n  \"type\": \"station\",\n  \"description\": \"sunt ullamco\"\n}"
 				},
 				{
-					"id": "2383e366-6293-453a-80b8-c84bda0583aa",
+					"id": "a84aac0e-23da-44df-a889-52733ed08ccb",
 					"name": "No spacecraft found for the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -107,6 +105,7 @@
 							],
 							"variable": [
 								{
+									"id": "a4495f99-f8f5-4bc7-a22d-38e1c3838e83",
 									"key": "spacecraftId",
 									"value": "non",
 									"description": "(Required) The unique identifier of the spacecraft"
@@ -117,7 +116,6 @@
 					"status": "Not Found",
 					"code": 404,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -125,19 +123,17 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"message\": \"ex incididunt Excepteur\"\n}"
 				},
 				{
-					"id": "d5025148-c228-40b2-8bff-446f44fa5824",
+					"id": "9464ccc4-16d8-43c4-abcc-c06808631b57",
 					"name": "Unexpected error",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -151,6 +147,7 @@
 							],
 							"variable": [
 								{
+									"id": "a4495f99-f8f5-4bc7-a22d-38e1c3838e83",
 									"key": "spacecraftId",
 									"value": "non",
 									"description": "(Required) The unique identifier of the spacecraft"
@@ -161,7 +158,6 @@
 					"status": "Internal Server Error",
 					"code": 500,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -169,10 +165,21 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"message\": \"ex incididunt Excepteur\"\n}"
 				}
 			]
+		},
+		{
+			"name": "v3",
+			"id": "865fd0b5-3338-4da6-8eaf-8f1b4be8ead5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"auth": {
