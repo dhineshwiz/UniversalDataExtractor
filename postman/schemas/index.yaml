@@ -10,7 +10,7 @@ paths:
       dvsd
       - name: spacecraftId
         description: The unique identifier of the spacecraft
-        in: path
+    
         required: true
         schema:
           $ref: '#/components/schemas/SpacecraftId'
