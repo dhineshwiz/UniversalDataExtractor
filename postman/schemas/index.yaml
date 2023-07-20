@@ -7,7 +7,7 @@ info:
 paths:
   /spacecrafts/{spacecraftId}:
     fds
-    dds
+    knk
     parameters:
       - name: spacecraftId
         description: The unique identifier of the spacecraft
