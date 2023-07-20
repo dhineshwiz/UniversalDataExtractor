@@ -1,13 +1,10 @@
 openapi: '3.0.0'
 info:
   version: '1.0.0'
-  title: 'Sample API'
   description: Buy or rent spacecrafts
 
 paths:
   /spacecrafts/{spacecraftId}:
-    fds
-    knk
     parameters:
       - name: spacecraftId
         description: The unique identifier of the spacecraft
