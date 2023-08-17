@@ -1,6 +1,7 @@
 openapi: '3.0.0'
 info:
   version: '1.0.0'
+  title: 'Sample API'
   description: Buy or rent spacecrafts
 
 paths:
@@ -16,7 +17,6 @@ paths:
       summary: Read a spacecraft
       responses:
         '200':
-          description: The spacecraft corresponding to the provided `spacecraftId`
           content:
             application/json:
               schema:
