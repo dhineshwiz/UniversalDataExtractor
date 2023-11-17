@@ -9,8 +9,8 @@ id = 07f9367e-4181-4f41-a6ac-4a545780deae
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"7321-8cd74518-6240-4665-9afa-ead43c5f7e8b","path":"v1_daef809c-d339-459b-8810-c93b75e7db70.json","metaData":{}}
-files[] = {"id":"7321-4d34e501-cc48-4693-acb5-d5943b8ba170","path":"v1test.json","metaData":{}}
+files[] = {"id":"7321-ff659d15-e6fa-460f-b89b-c13d21d32fa9","path":"v1_daef809c-d339-459b-8810-c93b75e7db70.json","metaData":{}}
+files[] = {"id":"7321-9eb30bb5-83f1-41c0-93f0-ae40bb496a0e","path":"v1test.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
